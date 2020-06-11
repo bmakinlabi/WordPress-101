@@ -1,5 +1,14 @@
-# Part 3: How to create custom menus
-- https://www.youtube.com/watch?v=Sz0z-Gyp3nA&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=3
-- Activating the menus option under the appearance menu. The menu bar allows us to customize our menus.
-- We created two different menu locations in our theme and created one for header and one for footer.
-- Primary and Secondary menu locations. 
+# Part 4: How to use the Post Loop and custom body class
+- https://www.youtube.com/watch?v=pJ4NTBdvyj4&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=4
+- We're printing the post wow. I can see the time and category and all that stuff
+- To create a url for blog under `/blog` and keep the home page different. 
+- Go to your pages and create a blog page
+- Then go to Settings > Reading and set select static page as your home page
+- Select the blog page as the post page. And select the home page to be home. 
+- Now the blog and home are different
+- Add the blog page to your menu.
+- You can see that I used `body_class()`, I went back to the frontend and I can now go to Inspect and see that the body css class is changing. The class is different for each page.
+- Note that it's the first css class. Don't pay attention to the rest.
+- Actually, for WordPress, the home is where the blog post is. `is_home` is actually blog.
+- `is_front_page()` is the real home where you've moved your blog to the `/blog`
+- how to apply custom CSS class to the body of the front page. 

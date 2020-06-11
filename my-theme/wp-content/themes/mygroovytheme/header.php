@@ -5,5 +5,15 @@
         <title>Awesome Theme</title>
         <?php wp_head(); ?>
     </head>
-    <body>
+    <?php
+
+        if( is_front_page() ):
+            $mygroovy_classes = array( 'mygroovy-class', 'my-class' );
+        else:
+            $mygroovy_classes = array( 'no-mygroovy-class' );
+        endif;
+
+    ?>
+
+    <body <?php body_class( $mygroovy_classes ); ?>>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
