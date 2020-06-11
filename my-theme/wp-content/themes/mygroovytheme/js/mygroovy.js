@@ -1,1 +1,1 @@
-// JavaScript functions
+//javascript functions
