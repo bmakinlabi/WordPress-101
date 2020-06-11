@@ -1,13 +1,10 @@
-# Part 6: How to add Theme Features with add_theme_support
-- https://www.youtube.com/watch?v=ghmdq1hEm14&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=6
-- We added background customizer. It lets us customize the background of our WordPress site. We activated that support.
-- Note that this is located under `Appearance > Background`. 
-- We activated the header now too. Just go to `Appearance > Header` (there we can customize the header of our app.)
-- I also get this code 
-```php
-<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-```
-- from here: https://codex.wordpress.org/Custom_Headers
-- it's made for us to just get our custom image. WordPress has made it already for us. I can use it where I want to place the customer header image. 
-- We also activated post thumbnails. (Now if we go to our posts, we can see that the featured image is allowed if we want to upload it.)
-- We activated post thumbnails. We can specify the size inside the function. We can use `large`, `thumbnail` and there're others. 
+# Part 7: How to add and create Post Formats
+- https://www.youtube.com/watch?v=ut5b0gSpV1w&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=7
+- We activated post formats. Note that post formats are post types which we can publish on the blog.
+- It means that we can publish a video, audio, image and more. There're nine types of post formats.
+- The standard is the default. It'll the normal one we publish. We can't remove that one.
+- Note that we can't create our own post format.
+- `get_post_format()` returns the name of the post format. Note that it returns nothing for the standard because it's the normal.
+- We're now dynamically generating the content base on the post format
+- If the post format is different, the content will be different
+- Wow. It's really cool. 
