@@ -1,14 +1,5 @@
-# Part 4: How to use the Post Loop and custom body class
-- https://www.youtube.com/watch?v=pJ4NTBdvyj4&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=4
-- We're printing the post wow. I can see the time and category and all that stuff
-- To create a url for blog under `/blog` and keep the home page different. 
-- Go to your pages and create a blog page
-- Then go to Settings > Reading and set select static page as your home page
-- Select the blog page as the post page. And select the home page to be home. 
-- Now the blog and home are different
-- Add the blog page to your menu.
-- You can see that I used `body_class()`, I went back to the frontend and I can now go to Inspect and see that the body css class is changing. The class is different for each page.
-- Note that it's the first css class. Don't pay attention to the rest.
-- Actually, for WordPress, the home is where the blog post is. `is_home` is actually blog.
-- `is_front_page()` is the real home where you've moved your blog to the `/blog`
-- how to apply custom CSS class to the body of the front page. 
+# Part 5: How to create Custom and Specialized Page Templates
+- https://www.youtube.com/watch?v=aUxDz7vXilQ&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=5
+- how to create a custom page. a unique `about-me` (if you choose `about` as the url in the future, it won't work. you'll have to change the custom page again.)
+- Another way to do this is to use the page id. Go to the browser and check the browser box and click and I saw `post=11` for me. So I changed the page to that `page-11` and yeah now I have it. It'll always be linked to that page all the time.
+- You can also create a page template, and people can just choose it when creating a new page (better)
