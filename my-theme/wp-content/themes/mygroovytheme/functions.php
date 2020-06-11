@@ -16,4 +16,8 @@ function mygroovy_theme_setup() {
     register_nav_menu( 'secondary', 'Footer Navigation' );
 }
 
-add_action('after_setup_theme', 'mygroovy_theme_setup' );
+add_action('init', 'mygroovy_theme_setup' );
+
+add_theme_support( 'custom-background' );
+add_theme_support( 'custom-header' );
+add_theme_support( 'post-thumbnails' );
