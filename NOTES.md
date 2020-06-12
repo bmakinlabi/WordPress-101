@@ -1,10 +1,8 @@
-# Part 8: How to create Sidebar and Widgets areas
-- https://www.youtube.com/watch?v=aSXitOevqA0&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=8
-- Changes was made and now back. 
-- Note that the `after_widget` and all others were copied https://developer.wordpress.org/reference/functions/register_sidebar/.
-- They always have to be there.
-- If you want to generate another widget sidebar, you can always do that in the current function which we just created.
-- Now if you go to `Appearance => Widgets` Widgets was just activated now from what we did. 
-- We added some things to the sidebar widget.
-- Then we make it available by creating the `sidebar.php` file and making it available in the `index.php`
-- We added the sidebar and even put it to the side. 
+# Part 9: Edit the query_posts with WP_Query
+- https://www.youtube.com/watch?v=GA--ROatgYM&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=9
+- A reference: https://developer.wordpress.org/reference/functions/query_posts/
+- We included the last blog post on the home page. Wow. We're now creating a home and how it should look. What it should display. 
+- Always use `wp_reset_postdata();` to reset everything you've done above. Whenever you use the query post. 
+- To print posts only from a certain category you need to get the category id. Go to the browser and go to categories in your backend and find the category and then click on it. Go to the browser box and you'll see `tag_ID=6` - In my case here, that particular category id is 6 and that's why it's there.
+- We use `cat` for the id and then `category_name` for the name
+- We're formulating the real home page and how we want it to look here. And I can already start to understand how I can build a great home page and put everything organized.
