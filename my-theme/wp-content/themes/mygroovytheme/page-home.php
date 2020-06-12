@@ -2,27 +2,48 @@
 
 <div class="row">
 
-    <div class="col-xs-12">
-
         <?php
 
-            $lastBlog = new WP_Query( 'type=post&posts_per_page=1' );
+            $args_cat = array( 
+                'include' => '7, 8, 6'
+             );
 
-            if( $lastBlog->have_posts() ):
-		
-                while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
+            $categories = get_categories( $args_cat );
+
+            foreach($categories as $category):
+                
+                $args = array(
+                    'type' => 'post',
+                    'posts_per_page' => 1,
+                    'category__in' => $category->term_id,
+                    'category__not_in' => array( 9 ),
+                );
+    
+                $lastBlog = new WP_Query( $args );
+    
+                if( $lastBlog->have_posts() ):
+            
+                    while( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
+    
+                        <div class="col-xs-12 col-sm-4">
+                            
+                            <?php get_template_part('content', 'featured'); ?>
+                            
+                        </div>
                     
-                    <?php get_template_part('content',get_post_format()); ?>
-                
-                <?php endwhile;
-                
-            endif;
+                    <?php endwhile;
+                    
+                endif;
+    
+                wp_reset_postdata();
 
-            wp_reset_postdata();
+            endforeach;
 
         ?>
 
-    </div>
+</div>
+
+<div class="row">
 
 	<div class="col-xs-12 col-sm-8">
 	<?php 
@@ -38,7 +59,7 @@
     endif;
     
     // PRINT OTHER 2 POSTS NOT THE FIRST ONE
-
+/*
     $args = array(
         'type' => 'post',
         'posts_per_page' => 2,
@@ -58,14 +79,15 @@
     endif;
 
     wp_reset_postdata();
-			
+*/	
 	?>
 
-    <hr>
+    <!-- <hr> -->
 
     <?php
 
         // PRINT ONLY TUTORIALS
+/*
         $lastBlog = new WP_Query( 'type=post&posts_per_page=-1&category_name=news' );
 
         if( $lastBlog->have_posts() ):
@@ -79,7 +101,7 @@
         endif;
 
         wp_reset_postdata();
-
+*/
     ?>
 
 	</div>
